@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>MusicShop</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+  <!-- Твої стилі -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Шрифти -->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700&subset=cyrillic-ext" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Заголовок -->
+  <header class="header bg-dark text-white">
+    <div class="container text-center">
+      <div class="display-4 fw-bold">MusicShop</div>
+      <p class="lead">Інструменти на твій смак</p>
+    </div>
+  </header>
+
+  <!-- Основний контейнер -->
+  <div class="container my-5">
+    <div class="row">
+      <!-- Товари -->
+      <div class="col-lg-8">
+        <div class="row g-4">
+
+          <!-- Товар 1 -->
+          <div class="col-md-6">
+            <div class="card shadow-sm h-100" data-id="01">
+              <img class="product-img" src="Png/black_and_white.png" alt="Чорно-біла гітара">
+              <div class="card-body text-center">
+                <h4 class="item-title">Чорно-біла гітара</h4>
+                <div class="details-wrapper">
+                  <div class="items counter-wrapper">
+                    <div class="items__control" data-action="minus">-</div>
+                    <div class="items__current" data-counter>1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                  </div>
+                  <div class="price">
+                    <div class="price__weight">1 шт.</div>
+                    <div class="price__currency">7699 грн.</div>
+                  </div>
+                </div>
+                <button data-cart type="button" class="btn btn-block btn-outline-warning">+ у кошик</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Товар 2 -->
+          <div class="col-md-6">
+            <div class="card shadow-sm h-100" data-id="02">
+              <img class="product-img" src="Png/black.png" alt="Чорна гітара">
+              <div class="card-body text-center">
+                <h4 class="item-title">Чорна гітара</h4>
+                <div class="details-wrapper">
+                  <div class="items counter-wrapper">
+                    <div class="items__control" data-action="minus">-</div>
+                    <div class="items__current" data-counter>1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                  </div>
+                  <div class="price">
+                    <div class="price__weight">1 шт.</div>
+                    <div class="price__currency">7999 грн.</div>
+                  </div>
+                </div>
+                <button data-cart type="button" class="btn btn-block btn-outline-warning">+ у кошик</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Товар 3 -->
+          <div class="col-md-6">
+            <div class="card shadow-sm h-100" data-id="03">
+              <img class="product-img" src="Png/red.png" alt="Червона гітара">
+              <div class="card-body text-center">
+                <h4 class="item-title">Червона гітара</h4>
+                <div class="details-wrapper">
+                  <div class="items counter-wrapper">
+                    <div class="items__control" data-action="minus">-</div>
+                    <div class="items__current" data-counter>1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                  </div>
+                  <div class="price">
+                    <div class="price__weight">1 шт.</div>
+                    <div class="price__currency">13999 грн.</div>
+                  </div>
+                </div>
+                <button data-cart type="button" class="btn btn-block btn-outline-warning">+ у кошик</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Товар 4 -->
+          <div class="col-md-6">
+            <div class="card shadow-sm h-100" data-id="04">
+              <img class="product-img" src="Png/white.png" alt="Біла гітара">
+              <div class="card-body text-center">
+                <h4 class="item-title">Біла гітара</h4>
+                <div class="details-wrapper">
+                  <div class="items counter-wrapper">
+                    <div class="items__control" data-action="minus">-</div>
+                    <div class="items__current" data-counter>1</div>
+                    <div class="items__control" data-action="plus">+</div>
+                  </div>
+                  <div class="price">
+                    <div class="price__weight">1 шт.</div>
+                    <div class="price__currency">8478 грн.</div>
+                  </div>
+                </div>
+                <button data-cart type="button" class="btn btn-block btn-outline-warning">+ у кошик</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Кошик -->
+      <div class="col-lg-4">
+        <div class="card shadow-lg">
+          <div class="card-body">
+            <h5 class="card-title">Кошик</h5>
+            <div data-cart-empty class="alert alert-secondary" role="alert">
+              Кошик порожній
+            </div>
+            <div class="cart-wrapper"></div>
+            <div class="cart-total mt-3">
+              <p><span class="h5">Доставка:</span> <span class="delivery-cost free">безкоштовна</span></p>
+              <p><span class="h5">До сплати:</span> <span class="total-price">0</span> <span class="rouble">грн.</span></p>
+            </div>
+          </div>
+          <div id="order-form" class="card-body border-top">
+            <h5 class="card-title">Оформити замовлення</h5>
+            <form>
+              <div class="form-group mb-3">
+                <input type="text" class="form-control" placeholder="Ваш номер телефону">
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Замовити</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Підключення скриптів -->
+  <script src="js/script.js"></script>
+</body>
+</html>
